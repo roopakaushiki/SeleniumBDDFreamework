@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>SeleniumBDDFramework</groupId>
+  <artifactId>SeleniumBDDFramework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>SeleniumBDDFramework</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+<build>
+    <plugins>
+        <plugin>
+        <groupId>org.apache.maven.pligins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.19.1</version>
+        <configuration>
+        <suitXmlFiles>
+        	<suitXmlFile>testng.xml</suitXmlFile>
+        
+    </suitXmlFiles>
+        <skipTests>true</skipTests>
+        
+     </configuration>
+        
+ </plugin>
+ 
+ <plugin>
+ <artifactId>mavem-compiler-plugin</artifactId>
+ <version>3.1</version>
+ <configuration>
+ <fork>true</fork>
+ <executable>C:\Program Files\Java\jdk1.8.0_161\bin\javac.exe</executable>
+ </configuration>
+ 
+ </plugin>
+ 
+ <plugin>
+ <groupId>net.masterthought</groupId>
+ <artifactId>maven-cucumber-reporting</artifactId>
+ <version>3.15.0</version>
+ <executions>
+ <execution>
+ <id>execute</id>
+ <phase>verify</phase>
+ <goals>
+ <goal>generate</goal>
+ </goals>
+ <configuration>
+ 
+ </configuration>
+ </execution>
+ 
+ </executions>
+ </plugin>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </plugins>
+</build>
+
+
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
